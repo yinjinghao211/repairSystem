@@ -1,5 +1,7 @@
 package com.repair.entity.ht;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -13,11 +15,12 @@ public class UserEntity {
     private String dept;
     private String name;
     private String password;
-    private String roleId;
     private String operator;
 
     @Id
     @Column(name = "id")
+    @GenericGenerator(strategy = "uuid" ,name = "uuid")
+    @GeneratedValue(generator = "uuid")
     public String getId() {
         return id;
     }
@@ -56,15 +59,6 @@ public class UserEntity {
         this.password = password;
     }
 
-    @Basic
-    @Column(name = "role_id")
-    public String getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
-    }
 
     @Basic
     @Column(name = "operator")
@@ -85,13 +79,12 @@ public class UserEntity {
                 Objects.equals(dept, that.dept) &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(password, that.password) &&
-                Objects.equals(roleId, that.roleId) &&
                 Objects.equals(operator, that.operator);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, dept, name, password, roleId, operator);
+        return Objects.hash(id, dept, name, password,operator);
     }
 }

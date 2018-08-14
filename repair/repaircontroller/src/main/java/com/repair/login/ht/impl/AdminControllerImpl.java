@@ -1,9 +1,9 @@
 package com.repair.login.ht.impl;
 
-import com.repair.entity.ht.impl.AdminServiceImpl;
 import com.repair.login.ht.AdminController;
 import com.repair.model.request.ht.AdminLoginRequest;
 import com.repair.model.response.ReturnValue;
+import com.repair.service.ht.impl.AdminServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestBody;

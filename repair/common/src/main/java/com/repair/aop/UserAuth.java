@@ -1,3 +1,4 @@
+/*
 package com.repair.aop;
 
 import org.aspectj.lang.annotation.Aspect;
@@ -10,14 +11,16 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
+*/
 /**
  * auther   kangwang
- */
+ *//*
+
 @Component
 @Aspect
 @SuppressWarnings("all")
 public class UserAuth {
-    @Pointcut("execution(public * com.repair.entity.ht.*.*.*(..))")
+    @Pointcut("execution(public * com.repair.ht.*.*.*(..))")
     public void role(){
 
     }
@@ -33,4 +36,4 @@ public class UserAuth {
         }
         request.getSession().setMaxInactiveInterval(30*60);
     }
-}
+}*/
