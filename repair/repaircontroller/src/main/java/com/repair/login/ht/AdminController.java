@@ -1,4 +1,4 @@
-package com.repair.entity.ht;
+package com.repair.login.ht;
 
 import com.repair.model.request.ht.AdminLoginRequest;
 import com.repair.model.response.ReturnValue;

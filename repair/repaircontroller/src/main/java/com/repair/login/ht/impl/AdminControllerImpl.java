@@ -1,8 +1,7 @@
-package com.repair.entity.ht.impl;
+package com.repair.login.ht.impl;
 
-import com.repair.constant.MsgEnum;
-import com.repair.entity.ht.AdminController;
-import com.repair.entity.ht.InfoEntity;
+import com.repair.entity.ht.impl.AdminServiceImpl;
+import com.repair.login.ht.AdminController;
 import com.repair.model.request.ht.AdminLoginRequest;
 import com.repair.model.response.ReturnValue;
 import org.springframework.beans.factory.annotation.Autowired;
